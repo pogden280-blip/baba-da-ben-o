@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baba Gostosinho</title>
+    <title>Baba da Benção</title>
     <!-- Tailwind CSS 3 CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- React & ReactDOM CDN -->
@@ -313,7 +313,7 @@
             };
 
             const handleAdminAuth = () => {
-                const authorizedPasswords = ["Dan2620", "Davi2168"];
+                const authorizedPasswords = ["Mazin2026"];
                 
                 // Check dynamic commission members
                 const commissionMember = players.find(p => p.role === 'commission' && p.password === passwordInput);
@@ -388,7 +388,7 @@
                 }
 
                 // Check admin password
-                const authorizedPasswords = ["Dan2620", "Davi2168"];
+                const authorizedPasswords = ["Mazin2026"];
                 const commissionMember = players.find(p => p.role === 'commission' && p.password === adminPasswordInput);
                 
                 if (authorizedPasswords.includes(adminPasswordInput) || commissionMember) {
@@ -646,9 +646,6 @@
                     listText += `${i}- ${p ? `${p.name} (${p.punishmentCount} babas)` : ''}\n`;
                 }
 
-                listText += `\n*OBS: LIMITE MÁXIMO DE 4 TIMES*\n`;
-                listText += `⚠️ *OBRIGATÓRIO COLETES AZUL E VERMELHO ⚠️*`;
-
                 if (isEmpty) {
                     window.open(`https://wa.me/?text=${encodeURIComponent(listText)}`, '_blank');
                 } else {
@@ -663,7 +660,7 @@
                     return;
                 }
 
-                let text = `⚽ *SORTEIO REALIZADO - BABA GOSTOSINHO* ⚽\n\n`;
+                let text = `⚽ *SORTEIO REALIZADO - BABA DA BENÇÂO* ⚽\n\n`;
                 
                 teams.forEach((team, idx) => {
                     text += `${idx === 0 ? '🟢' : idx === 1 ? '⚫' : idx === 2 ? '🔵' : '🔴'} *${team.name}*\n`;
@@ -723,7 +720,7 @@
                 let totalIncome = 0;
                 let totalExpense = 0;
                 
-                let text = `📊 *LEVANTAMENTO FINANCEIRO - BABA GOSTOSINHO* 📊\n`;
+                let text = `📊 *LEVANTAMENTO FINANCEIRO - BABA DA BENÇÃO* 📊\n`;
                 if (filterStartDate && filterEndDate) {
                     text += `📅 Período: ${new Date(filterStartDate + 'T00:00:00').toLocaleDateString('pt-BR')} até ${new Date(filterEndDate + 'T00:00:00').toLocaleDateString('pt-BR')}\n`;
                 }
@@ -1031,7 +1028,7 @@
                     else winnerText = `🏆 *Campeão:* ${winners[0][0]}`;
                 }
 
-                let text = `⚽ *RESUMO DO BABA GOSTOSINHO* ⚽\n\n${winnerText}\n\n`;
+                let text = `⚽ *RESUMO DO BABA DA BENÇÃO* ⚽\n\n${winnerText}\n\n`;
                 
                 text += `📊 *CLASSIFICAÇÃO:*\n`;
                 sortedStats.forEach(([name, s]) => {
@@ -1085,12 +1082,12 @@
                 const t2 = teams[currentMatchTeams[1]];
                 if (!t1 || !t2) return;
 
-                const text = `⚽ *Baba gostosinho - Resumo da Partida* ⚽\n\n` +
+                const text = `⚽ *Baba da Benção - Resumo da Partida* ⚽\n\n` +
                     `Placar: ${t1.name} ${t1.score} x ${t2.score} ${t2.name}\n` +
                     `Tempo: ${formatTime(timerSeconds)}\n\n` +
                     `*${t1.name}:* ${t1.players.map(p => p.name).join(', ')}\n` +
                     `*${t2.name}:* ${t2.players.map(p => p.name).join(', ')}\n\n` +
-                    `Organizado via Baba gostosinho!`;
+                    `Organizado via Baba da Benção!`;
 
                 if (navigator.share) {
                     navigator.share({ text });
@@ -1149,7 +1146,7 @@
                         {currentTab === 'home' && (
                             <div className="space-y-6">
                                 {!isAdminMode && !isViewMode ? (
-                                    <div className="fixed inset-0 flex flex-col items-center justify-end px-8 pb-20 bg-cover bg-center" style={{ backgroundImage: "url('https://image2url.com/r2/default/images/1773069462364-21238cdb-2ba8-4949-b313-b74d3a6466ec.png')" }}>
+                                    <div className="fixed inset-0 flex flex-col items-center justify-end px-8 pb-20 bg-cover bg-center" style={{ backgroundImage: "url('https://image2url.com/r2/default/images/1773546754787-ada1b6f7-8c64-4c48-8e4a-433f1b8398ad.png')" }}>
                                         <div className="flex gap-4 w-full max-w-md">
                                             <button 
                                                 onClick={() => setShowPasswordModal(true)} 
